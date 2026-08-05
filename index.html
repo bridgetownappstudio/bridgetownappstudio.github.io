@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/logo.png">
   <title>Bridgetown App Studio</title>
   <style>
     :root {
@@ -70,12 +71,24 @@
     a:hover {
       text-decoration: underline;
     }
+
+    a:focus-visible {
+      outline: 3px solid #b8efc8;
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    footer a {
+      color: var(--green-dark);
+      text-decoration: underline;
+      text-underline-offset: 0.18em;
+    }
   </style>
 </head>
 <body>
   <header>
     <!-- Replace logo.png with your actual file name -->
-    <img src="logo.png" alt="Bridgetown App Studio Logo" />
+    <img src="logo.png" alt="Bridgetown App Studio Logo">
     <h1>Bridgetown App Studio, LLC</h1>
     <p>iOS Apps. Clean Code. Seamless Experiences.</p>
   </header>
@@ -90,9 +103,9 @@
       <h2>Services</h2>
       <ul>
         <li>Custom iOS App Development</li>
-        <li>SwiftUI & Swift Concurrency Expertise</li>
-        <li>Modular Architecture & SPM Integration</li>
-        <li>App Store Deployment & Consulting</li>
+        <li>SwiftUI &amp; Swift Concurrency Expertise</li>
+        <li>Modular Architecture &amp; SPM Integration</li>
+        <li>App Store Deployment &amp; Consulting</li>
       </ul>
     </section>
 
@@ -103,8 +116,9 @@
   </main>
 
   <footer>
-    &copy; 2025 Bridgetown App Studio, LLC.<br />
-    Made with 💚 in Portland, OR 🌲
+    &copy; 2025 Bridgetown App Studio, LLC.<br>
+    Made with 💚 in Portland, OR 🌲<br>
+    <a href="/dove/privacy/">Dove Privacy Policy</a>
   </footer>
 </body>
 </html>
