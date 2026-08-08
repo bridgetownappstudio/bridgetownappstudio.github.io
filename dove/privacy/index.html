@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Privacy Policy for Dove, the place-saving and planning app from Bridgetown App Studio."
+  >
+  <link rel="canonical" href="https://bridgetownappstudio.com/dove/privacy/">
+  <link rel="icon" href="/dove/assets/dove-mark.svg" type="image/svg+xml">
+  <title>Dove Privacy Policy | Bridgetown App Studio</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --green-950: #01351a;
+      --green-900: #014421;
+      --green-800: #07592c;
+      --green-700: #146c38;
+      --green-100: #dbece0;
+      --green-50: #edf8f0;
+      --ink: #223027;
+      --ink-muted: #536158;
+      --surface: #ffffff;
+      --background: #f7fdf8;
+      --border: #c9ddcf;
+      --focus: #ffd56a;
+      --shadow: 0 18px 50px rgba(1, 68, 33, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      font-size: 1rem;
+      line-height: 1.68;
+    }
+
+    a {
+      color: var(--green-700);
+      font-weight: 600;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+
+    a:hover {
+      color: var(--green-900);
+      text-decoration-thickness: 2px;
+    }
+
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+      border-radius: 3px;
+    }
+
+    .skip-link {
+      position: fixed;
+      z-index: 10;
+      top: 0.75rem;
+      left: 0.75rem;
+      padding: 0.65rem 0.9rem;
+      border-radius: 0.4rem;
+      background: var(--surface);
+      color: var(--green-900);
+      transform: translateY(-180%);
+      transition: transform 120ms ease;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .site-header {
+      background:
+        radial-gradient(circle at 80% 10%, rgba(160, 225, 180, 0.2), transparent 30%),
+        linear-gradient(145deg, var(--green-950), var(--green-800));
+      color: #ffffff;
+    }
+
+    .header-inner,
+    .page,
+    .footer-inner {
+      width: min(100% - 2rem, 800px);
+      margin-inline: auto;
+    }
+
+    .header-inner {
+      padding: 1.25rem 0 3.4rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      color: #ffffff;
+      font-size: 0.94rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 2rem;
+      height: 2rem;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      font-size: 1.05rem;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      margin: 3.1rem 0 0.8rem;
+      padding: 0.24rem 0.62rem;
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      border-radius: 999px;
+      font-size: 0.77rem;
+      font-weight: 750;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.2;
+      text-wrap: balance;
+    }
+
+    h1 {
+      max-width: 14ch;
+      margin: 0;
+      font-size: clamp(2.35rem, 7vw, 4.15rem);
+      letter-spacing: -0.045em;
+    }
+
+    .lede {
+      max-width: 62ch;
+      margin: 1rem 0 0;
+      color: #dff3e5;
+      font-size: clamp(1.04rem, 2.8vw, 1.22rem);
+    }
+
+    .dates {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 1.35rem;
+      margin: 1.3rem 0 0;
+      color: #c9e7d2;
+      font-size: 0.9rem;
+    }
+
+    .page {
+      position: relative;
+      margin-top: -1.7rem;
+      margin-bottom: 4rem;
+      padding: clamp(1.25rem, 4vw, 2.5rem);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .summary {
+      padding: 1.2rem 1.3rem;
+      border-left: 5px solid var(--green-700);
+      border-radius: 0.45rem;
+      background: var(--green-50);
+    }
+
+    .summary h2 {
+      margin-top: 0;
+    }
+
+    .summary ul {
+      margin-bottom: 0;
+    }
+
+    .contents {
+      margin: 2.2rem 0;
+      padding: 1.15rem 1.3rem;
+      border: 1px solid var(--border);
+      border-radius: 0.6rem;
+      background: color-mix(in srgb, var(--surface) 86%, var(--green-50));
+    }
+
+    .contents h2 {
+      margin: 0 0 0.55rem;
+      font-size: 1.08rem;
+    }
+
+    .contents ol {
+      columns: 2;
+      gap: 2rem;
+      margin: 0;
+      padding-left: 1.3rem;
+    }
+
+    .contents li {
+      break-inside: avoid;
+      margin: 0.24rem 0;
+    }
+
+    section[id] {
+      scroll-margin-top: 1rem;
+    }
+
+    section + section {
+      margin-top: 2.8rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    h2 {
+      margin: 0 0 0.85rem;
+      color: var(--green-900);
+      font-size: clamp(1.45rem, 4vw, 1.9rem);
+      letter-spacing: -0.025em;
+    }
+
+    h3 {
+      margin: 1.7rem 0 0.45rem;
+      color: var(--ink);
+      font-size: 1.08rem;
+    }
+
+    p,
+    ul {
+      max-width: 68ch;
+    }
+
+    li + li {
+      margin-top: 0.55rem;
+    }
+
+    .data-list,
+    .service-list {
+      display: grid;
+      gap: 0.85rem;
+      margin: 1.15rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .data-list li,
+    .service-list li {
+      max-width: none;
+      margin: 0;
+      padding: 1rem 1.05rem;
+      border: 1px solid var(--border);
+      border-radius: 0.55rem;
+      background: color-mix(in srgb, var(--surface) 94%, var(--green-50));
+    }
+
+    .data-list strong,
+    .service-list strong {
+      display: block;
+      margin-bottom: 0.15rem;
+      color: var(--green-900);
+    }
+
+    .note {
+      margin-top: 1.15rem;
+      padding: 0.9rem 1rem;
+      border-radius: 0.5rem;
+      background: var(--green-50);
+      color: var(--ink-muted);
+      font-size: 0.95rem;
+    }
+
+    .plain-label {
+      font-weight: 750;
+    }
+
+    code {
+      padding: 0.08em 0.28em;
+      border-radius: 0.25rem;
+      background: var(--green-50);
+      color: var(--green-900);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.9em;
+    }
+
+    .contact-card {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.8rem 1.5rem;
+      margin-top: 1rem;
+      padding: 1.15rem 1.25rem;
+      border-radius: 0.65rem;
+      background: var(--green-900);
+      color: #ffffff;
+    }
+
+    .contact-card p {
+      margin: 0;
+    }
+
+    .contact-card a {
+      color: #ffffff;
+    }
+
+    .site-footer {
+      padding: 1.8rem 0 2.4rem;
+      background: var(--green-100);
+      color: var(--green-950);
+      font-size: 0.9rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.7rem 1.5rem;
+    }
+
+    .footer-inner p {
+      margin: 0;
+    }
+
+    .footer-inner a {
+      color: var(--green-900);
+    }
+
+    @media (max-width: 600px) {
+      .header-inner,
+      .page,
+      .footer-inner {
+        width: min(100% - 1.25rem, 800px);
+      }
+
+      .header-inner {
+        padding-bottom: 2.9rem;
+      }
+
+      .eyebrow {
+        margin-top: 2.5rem;
+      }
+
+      .page {
+        padding: 1.1rem;
+        border-radius: 0.75rem;
+      }
+
+      .summary,
+      .contents {
+        padding: 1rem;
+      }
+
+      .contents ol {
+        columns: 1;
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink: #e5efe8;
+        --ink-muted: #b5c5ba;
+        --surface: #142019;
+        --background: #0c1510;
+        --border: #334a3a;
+        --green-100: #183d28;
+        --green-50: #1a2d20;
+        --green-700: #6dd58c;
+        --green-900: #a0e9b5;
+        --green-950: #07170d;
+        --shadow: 0 18px 50px rgba(0, 0, 0, 0.24);
+      }
+
+      .site-header {
+        background:
+          radial-gradient(circle at 80% 10%, rgba(94, 199, 127, 0.16), transparent 30%),
+          linear-gradient(145deg, #06160c, #0b3f21);
+      }
+
+      .site-footer {
+        color: #e5efe8;
+      }
+
+      .footer-inner a {
+        color: #b8efc8;
+      }
+    }
+
+    @media print {
+      .skip-link,
+      .contents {
+        display: none;
+      }
+
+      body {
+        background: #ffffff;
+        color: #111111;
+      }
+
+      .site-header {
+        background: #ffffff;
+        color: #111111;
+      }
+
+      .brand,
+      .lede,
+      .dates {
+        color: #111111;
+      }
+
+      .page {
+        width: 100%;
+        margin: 0;
+        border: 0;
+        box-shadow: none;
+      }
+
+      a {
+        color: #111111;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="/dove/privacy/privacy.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to privacy policy</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <nav class="topbar" aria-label="Site">
+        <a class="dove-wordmark" href="/" aria-label="Dove — where to?">
+          <span class="dove-wordmark-name">dove.</span>
+          <span class="dove-wordmark-tagline">WHERE TO?</span>
+        </a>
+        <a class="studio-link" href="/">
+          <span>Bridgetown App Studio</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+      </nav>
+
+      <div class="hero">
+        <div class="hero-mark" aria-hidden="true">
+          <img src="/dove/assets/dove-mark.svg" alt="" width="96" height="96">
+        </div>
+        <div>
+          <p class="eyebrow">Privacy at Dove</p>
+          <h1>Privacy Policy</h1>
+          <p class="lede">
+            A plain-language explanation of the information Dove handles, where it
+            goes, and the choices available to you.
+          </p>
+          <p class="dates">
+            <span><strong>Effective:</strong> August 5, 2026</span>
+            <span><strong>Last updated:</strong> August 5, 2026</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page" id="main-content">
+    <section class="summary" aria-labelledby="summary-title">
+      <h2 id="summary-title">The short version</h2>
+      <ul>
+        <li>
+          Dove stores your saved places, tags, profile name, and plans using
+          on-device storage and Apple’s iCloud and CloudKit services.
+        </li>
+        <li>
+          Your private CloudKit data is private to your iCloud account by
+          default. Plan or list content is shared only when you choose people
+          through Apple’s sharing controls.
+        </li>
+        <li>
+          Location is optional and used for current-location and nearby-map
+          features. Dove does not send coordinates to its analytics service provider.
+        </li>
+        <li>
+          Analytics-enabled versions may send limited usage and technical analytics
+          to an analytics service provider. This information is not associated with
+          a Dove account or used to identify you.
+        </li>
+        <li>We do not sell personal information or use it for targeted advertising.</li>
+      </ul>
+    </section>
+
+    <nav class="contents" aria-labelledby="contents-title">
+      <h2 id="contents-title">On this page</h2>
+      <ol>
+        <li><a href="#scope">Scope</a></li>
+        <li><a href="#data">Data Dove handles</a></li>
+        <li><a href="#use">How Dove uses data</a></li>
+        <li><a href="#icloud">iCloud and Apple services</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#analytics">Limited analytics</a></li>
+        <li><a href="#providers">Service providers</a></li>
+        <li><a href="#sharing">Sharing and disclosures</a></li>
+        <li><a href="#retention">Retention and your controls</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#international">International processing</a></li>
+        <li><a href="#changes">Changes and contact</a></li>
+      </ol>
+    </nav>
+
+    <section id="scope">
+      <h2>1. Scope</h2>
+      <p>
+        This policy applies to Dove, including its Apple-platform app and Dove’s
+        Share extension. Dove helps you find and save places, organize them with
+        tags, import places shared from Apple Maps, and create plans that invited
+        participants can vote on and rank.
+      </p>
+      <p>
+        This policy does not control Apple, our analytics service provider,
+        restaurant websites, or other third-party services you choose to open.
+        Their own policies apply to their services.
+      </p>
+    </section>
+
+    <section id="data">
+      <h2>2. Data Dove handles</h2>
+      <p>Dove handles the following information when you use the related feature:</p>
+      <ul class="data-list">
+        <li>
+          <strong>Saved places and tags</strong>
+          Place and tag names; addresses; coordinates for the place; category;
+          phone number; website, Apple Maps, image, and Instagram links; hours;
+          summaries; and the tags or collections you assign. Dove may also save
+          public menu and event metadata used to enrich a saved place.
+        </li>
+        <li>
+          <strong>Plans, votes, rankings, and sharing</strong>
+          Plan titles, notes, dates and times, candidate places, selected winners,
+          archive status, participant display names, yes/maybe/no votes, ordered
+          rankings, participant roles, and Apple sharing state.
+        </li>
+        <li>
+          <strong>Optional profile information and settings</strong>
+          A display name you choose for shared plans, plus local settings such as
+          appearance. Your Dove display name is not your Apple Account name.
+        </li>
+        <li>
+          <strong>Location, when authorized</strong>
+          Your current device location for nearby results, map centering, and
+          distance-based place discovery. See <a href="#location">Location</a>
+          for details.
+        </li>
+        <li>
+          <strong>Apple Maps shared-place imports</strong>
+          When you share a place to Dove, the Share extension can read the shared
+          MapKit item, Apple Maps URL, or supported text. This can include a place
+          name, address, coordinates, category, phone number, website, Apple Maps
+          identifiers, and time zone.
+        </li>
+        <li>
+          <strong>Restaurant website and menu metadata</strong>
+          Dove may fetch publicly available restaurant pages, related menu pages,
+          PDFs, and images to find hours, menus, events, summaries, and images.
+          This happens for place-detail and enrichment features.
+        </li>
+        <li>
+          <strong>Support communications</strong>
+          If you email us, we receive your email address and the message and files
+          you choose to send. Support email is separate from Dove’s in-app and
+          CloudKit data.
+        </li>
+      </ul>
+    </section>
+
+    <section id="use">
+      <h2>3. How Dove uses data</h2>
+      <p>Dove uses this information to:</p>
+      <ul>
+        <li>provide place search, maps, saved-place, tag, menu, and planning features;</li>
+        <li>sync supported app data across your Apple devices through iCloud;</li>
+        <li>share a list or plan with the people you choose;</li>
+        <li>show votes, rankings, and plan results to authorized participants;</li>
+        <li>complete Apple Maps imports and continue work from the Share extension;</li>
+        <li>maintain app reliability and respond to support requests; and</li>
+        <li>
+          understand aggregate feature use through the limited analytics described
+          in <a href="#analytics">Limited product analytics</a>, when that
+          analytics-enabled version and configuration are in use.
+        </li>
+      </ul>
+    </section>
+
+    <section id="icloud">
+      <h2>4. iCloud, CloudKit, and Apple services</h2>
+
+      <h3>Private data</h3>
+      <p>
+        Dove syncs saved-place core details, tags and tag membership, and your
+        optional Dove display name through the private database in Dove’s CloudKit
+        container. Plans start in the owner’s private CloudKit database. Apple
+        describes a private CloudKit database as accessible only to its user by
+        default and not visible in the developer portal.
+      </p>
+      <p>
+        Some enrichment and cache data remains on your device instead of syncing.
+        For example, Dove keeps certain downloaded menu or event details and map
+        search caches in local app storage.
+      </p>
+
+      <h3>Shared data</h3>
+      <p>
+        Dove uses Apple’s <code>CKShare</code> system for shared lists and plans.
+        Public access is disabled. A recipient can access shared records only
+        after the owner shares them and the recipient accepts through Apple’s
+        sharing flow. Access is then controlled by the share’s participant role
+        and permissions.
+      </p>
+      <p>
+        Shared plan participants can see the plan content and participant activity
+        needed for collaboration, including display names, places, votes, rankings,
+        and the selected winner. A shared saved list can include the list name and
+        selected place details such as addresses and coordinates.
+      </p>
+
+      <h3>What Bridgetown App Studio can access</h3>
+      <p>
+        Dove does not operate a separate Bridgetown App Studio server that copies
+        your private CloudKit records. Under the app’s current architecture, we do
+        not browse your private CloudKit database through a developer dashboard.
+        Dove code running for your signed-in iCloud account reads and writes the
+        records needed for the features you use. Apple operates iCloud, CloudKit,
+        MapKit, and Apple Maps under
+        <a href="https://www.apple.com/legal/privacy/">Apple’s privacy policy</a>.
+      </p>
+
+      <p class="note">
+        iCloud availability, sync behavior, account permissions, and sharing are
+        also controlled by your Apple Account and device settings.
+      </p>
+    </section>
+
+    <section id="location">
+      <h2>5. Location</h2>
+      <p>
+        Dove asks for When In Use location permission when a feature needs your
+        location. If you allow it, Dove uses the current coordinate to center the
+        map, find nearby places, and provide distance-based behavior. Dove and
+        MapKit may hold the current coordinate in memory, and Dove may keep it in
+        local map or search caches that support those results.
+      </p>
+      <p>
+        Your current device location is not stored as part of your Dove profile,
+        is not added to CloudKit as a location history, and is not sent to the
+        analytics service provider. Coordinates belonging to a restaurant or other
+        place are different: Dove stores those when you save that place or add it
+        to a plan.
+      </p>
+      <p>
+        You can deny location permission and still use features that do not need
+        it. You can review or change permission at any time in Apple Settings.
+      </p>
+    </section>
+
+    <section id="analytics">
+      <h2>6. Limited product analytics</h2>
+      <p>
+        When you use an analytics-enabled Dove version, Dove sends limited
+        product-usage and technical analytics to an analytics service provider to
+        understand feature use, improve the product, and monitor reliability. This
+        information is not associated with a Dove account or used to identify you.
+        Versions without analytics or a valid configuration send no analytics events.
+      </p>
+
+      <h3>What Dove sends</h3>
+      <p>
+        Dove sends only a small set of successful product actions, such as creating
+        a saved place, opening an Explore place detail, creating or archiving a
+        plan, submitting a vote or ranking, selecting a winner, preparing a plan
+        share, or completing a shared-place import. Properties are limited to
+        fixed categories and count ranges, such as the feature source, vote choice,
+        import outcome, or a broad number-of-choices bucket.
+      </p>
+      <p>
+        The analytics service also receives limited technical context, such as
+        Dove’s app and build version, operating system version, Apple device model,
+        screen dimensions, SDK version, connection type, and distribution channel.
+        The analytics SDK uses a new random identifier each app launch. Dove does
+        not associate that identifier with your Dove profile, Apple Account,
+        CloudKit data, or identifiers from another launch.
+      </p>
+
+      <h3>What Dove deliberately excludes</h3>
+      <p>Analytics does not include:</p>
+      <ul>
+        <li>your name, email address, account identifiers, or participant names;</li>
+        <li>search text, place names or IDs, list or tag names, plan names, or notes;</li>
+        <li>addresses, device or place coordinates, precise location, or location history;</li>
+        <li>URLs, sharing links, restaurant website content, or menu content;</li>
+        <li>CloudKit record identifiers, receipts, or Apple Account details;</li>
+        <li>raw errors, stack traces, or other free-form diagnostic text; or</li>
+        <li>the advertising identifier or another cross-app advertising ID.</li>
+      </ul>
+      <p>
+        Automatic event capture, persistent Dove user or device identity, analytics
+        user profiles, aliases, IP-based geolocation, attribution, advertising
+        integrations, feature flags, and session replay are disabled. The Share
+        extension does not include the analytics SDK or send analytics.
+      </p>
+
+      <h3>Processing and retention</h3>
+      <p>
+        The analytics service provider stores and processes these limited analytics
+        in the United States for up to two years, after which they expire under the
+        service’s retention settings. The provider receives this information only to
+        provide analytics services on our behalf and must apply privacy and security
+        protections equivalent to those described in this policy.
+      </p>
+      <p>
+        Because the random analytics identifier changes every launch and is not
+        associated with a Dove account or used to identify you, we generally cannot
+        locate all of one person’s analytics events in response to an individual
+        access or deletion request.
+        This separation is intentional and reduces the ability to profile a person
+        across app launches.
+      </p>
+      <p>
+        Dove uses this limited information for its own product analytics. It does
+        not use the information to track you across other companies’ apps or
+        websites, and Dove does not request App Tracking Transparency (ATT)
+        permission for this analytics.
+        This paragraph describes Dove’s technical configuration; it is not a legal
+        determination or guarantee about every jurisdiction.
+      </p>
+    </section>
+
+    <section id="providers">
+      <h2>7. Service providers and outside sites</h2>
+      <ul class="service-list">
+        <li>
+          <strong>Apple</strong>
+          Provides the operating system, iCloud, CloudKit, MapKit, Apple Maps,
+          Apple’s share flow, and related account and permission controls. Apple
+          processes data needed to provide those services.
+        </li>
+        <li>
+          <strong>Analytics service provider</strong>
+          Processes the limited usage and technical analytics described above on
+          our behalf, in the United States, for up to two years. The provider must
+          apply equivalent privacy and security protections and may not use Dove’s
+          analytics for advertising or cross-company tracking.
+        </li>
+        <li>
+          <strong>Restaurant and related websites</strong>
+          When Dove opens or fetches a public webpage, menu, PDF, or image, that
+          site and its hosting providers receive a network request. As with a
+          normal web request, they may receive the requesting IP address, Dove’s
+          user-agent string, the requested URL, and other standard connection
+          information under their own policies.
+        </li>
+        <li>
+          <strong>Email provider</strong>
+          Our email provider processes messages you send to the privacy or support
+          address so that we can receive and respond to them.
+        </li>
+      </ul>
+    </section>
+
+    <section id="sharing">
+      <h2>8. Sharing and disclosures</h2>
+      <p>
+        Dove shares plan or saved-list content only when you use Apple’s sharing
+        controls. The owner chooses or approves participants, and CloudKit enforces
+        the share permissions. Dove does not make these shares public. Participants
+        may still copy or redistribute information they can see, so invite only
+        people you trust.
+      </p>
+      <p>
+        We do not sell personal information. We do not use Dove information for
+        targeted advertising, and we do not share it with data brokers. We may
+        disclose information when you direct us to, when needed for the service
+        providers described in this policy, or when required to comply with a
+        valid legal obligation or protect the security and rights of users and the
+        service.
+      </p>
+    </section>
+
+    <section id="retention">
+      <h2>9. Retention, deletion, and your controls</h2>
+      <ul>
+        <li>
+          <span class="plain-label">Saved places and tags:</span> Dove provides
+          controls to remove saved places and delete tags or lists. CloudKit
+          propagates supported synced-data changes across your devices.
+        </li>
+        <li>
+          <span class="plain-label">Sharing:</span> A saved-list owner can stop
+          sharing. Apple’s share controls govern participant access. A participant
+          may retain copies they made outside Dove.
+        </li>
+        <li>
+          <span class="plain-label">Plans:</span> Dove currently provides an
+          archive control rather than complete plan deletion. Archiving hides a
+          plan from active use but does not erase its CloudKit records.
+        </li>
+        <li>
+          <span class="plain-label">Profile:</span> You can edit your Dove display
+          name. The current app does not provide a separate delete-profile button.
+        </li>
+        <li>
+          <span class="plain-label">Location:</span> You can deny or revoke
+          location permission in Apple Settings.
+        </li>
+        <li>
+          <span class="plain-label">Usage analytics:</span> Analytics events are
+          retained for up to two years. The per-launch identifiers are deliberately
+          not associated with a Dove account, which generally prevents us from
+          finding every event from one person for individual deletion.
+        </li>
+        <li>
+          <span class="plain-label">Support email:</span> You can ask us to delete
+          support correspondence associated with your email address, subject to
+          records we need to retain for security or legal obligations.
+        </li>
+      </ul>
+      <p>
+        Removing Dove from a device does not necessarily delete records stored in
+        iCloud. Your Apple Account and iCloud settings also affect storage and
+        access. Because private CloudKit records are not visible to us through the
+        developer portal, we may not be able to locate or delete those records for
+        you from our side. Contact us if you need help understanding the controls
+        available for your situation.
+      </p>
+    </section>
+
+    <section id="security">
+      <h2>10. Security</h2>
+      <p>
+        Dove relies on Apple’s platform protections for app storage, permissions,
+        iCloud, and CloudKit sharing. Network requests use the security available
+        from Apple’s networking stack and the destination service. We limit
+        analytics fields by design and separate analytics from Dove profile and
+        CloudKit identifiers. No storage or transmission method can be guaranteed
+        completely secure, so we continue to review the app’s data flows and
+        dependencies as Dove changes.
+      </p>
+    </section>
+
+    <section id="international">
+      <h2>11. International processing</h2>
+      <p>
+        Apple determines the locations and systems used for Apple services under
+        its policies. When Dove analytics is enabled, the limited usage and
+        technical analytics described above are stored and processed in the United
+        States by an analytics service provider. If you use Dove outside the United
+        States, this means those limited analytics may be transferred to and
+        processed in the United States.
+      </p>
+    </section>
+
+    <section id="changes">
+      <h2>12. Policy changes and contact</h2>
+      <p>
+        We may update this policy when Dove’s features, service providers, or data
+        practices change. We will update the date at the top of this page. If a
+        change materially affects how Dove handles information, we will provide
+        additional notice when appropriate.
+      </p>
+      <div class="contact-card">
+        <p><strong>Privacy questions or requests</strong></p>
+        <p>
+          <a href="mailto:bridgetownappstudio@gmail.com">
+            bridgetownappstudio@gmail.com
+          </a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 Bridgetown App Studio, LLC.</p>
+      <p><a href="/">Back to Bridgetown App Studio</a></p>
+    </div>
+  </footer>
+</body>
+</html>
