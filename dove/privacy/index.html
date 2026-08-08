@@ -715,11 +715,11 @@
 
       <h3>Projects, storage, and retention</h3>
       <p>
-        The planned configuration uses separate Mixpanel projects for development,
-        TestFlight, and production so test activity is not mixed with production
-        reporting. Dove’s production Mixpanel project is intended to use United
-        States data residency. Mixpanel events are retained for two years and then
-        expire under the project’s retention setting.
+        Dove uses separate Mixpanel projects for development and production.
+        TestFlight and App Store events use the production project and include a
+        fixed distribution-channel category so they can be separated in reporting.
+        Both projects use United States data residency. Mixpanel events are retained
+        for two years and then expire under the projects’ retention settings.
       </p>
       <p>
         Because the random analytics identifier changes every launch and is not
