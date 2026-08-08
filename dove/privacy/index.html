@@ -485,12 +485,12 @@
         </li>
         <li>
           Location is optional and used for current-location and nearby-map
-          features. Dove does not send coordinates to Mixpanel.
+          features. Dove does not send coordinates to its analytics service provider.
         </li>
         <li>
-          Analytics-enabled versions may send limited, anonymous product events
-          to Mixpanel. Dove does not use advertising IDs, persistent identity,
-          People profiles, IP geolocation, or cross-app tracking.
+          Analytics-enabled versions may send limited usage and technical analytics
+          to an analytics service provider. This information is not associated with
+          a Dove account or used to identify you.
         </li>
         <li>We do not sell personal information or use it for targeted advertising.</li>
       </ul>
@@ -504,7 +504,7 @@
         <li><a href="#use">How Dove uses data</a></li>
         <li><a href="#icloud">iCloud and Apple services</a></li>
         <li><a href="#location">Location</a></li>
-        <li><a href="#analytics">Anonymous analytics</a></li>
+        <li><a href="#analytics">Limited analytics</a></li>
         <li><a href="#providers">Service providers</a></li>
         <li><a href="#sharing">Sharing and disclosures</a></li>
         <li><a href="#retention">Retention and your controls</a></li>
@@ -523,9 +523,9 @@
         participants can vote on and rank.
       </p>
       <p>
-        This policy does not control Apple, Mixpanel, restaurant websites, or
-        other third-party services you choose to open. Their own policies apply
-        to their services.
+        This policy does not control Apple, our analytics service provider,
+        restaurant websites, or other third-party services you choose to open.
+        Their own policies apply to their services.
       </p>
     </section>
 
@@ -591,7 +591,7 @@
         <li>maintain app reliability and respond to support requests; and</li>
         <li>
           understand aggregate feature use through the limited analytics described
-          in <a href="#analytics">Anonymous product analytics</a>, when that
+          in <a href="#analytics">Limited product analytics</a>, when that
           analytics-enabled version and configuration are in use.
         </li>
       </ul>
@@ -657,9 +657,10 @@
       </p>
       <p>
         Your current device location is not stored as part of your Dove profile,
-        is not added to CloudKit as a location history, and is not sent to
-        Mixpanel. Coordinates belonging to a restaurant or other place are
-        different: Dove stores those when you save that place or add it to a plan.
+        is not added to CloudKit as a location history, and is not sent to the
+        analytics service provider. Coordinates belonging to a restaurant or other
+        place are different: Dove stores those when you save that place or add it
+        to a plan.
       </p>
       <p>
         You can deny location permission and still use features that do not need
@@ -668,16 +669,16 @@
     </section>
 
     <section id="analytics">
-      <h2>6. Anonymous product analytics</h2>
+      <h2>6. Limited product analytics</h2>
       <p>
-        Dove’s analytics implementation is being prepared for a future
-        analytics-enabled app version. It applies only when the Dove build you use
-        includes that implementation and has a valid Mixpanel project
-        configuration. Without a valid configuration, analytics is a no-op and no
-        events are sent to Mixpanel.
+        When you use an analytics-enabled Dove version, Dove sends limited
+        product-usage and technical analytics to an analytics service provider to
+        understand feature use, improve the product, and monitor reliability. This
+        information is not associated with a Dove account or used to identify you.
+        Versions without analytics or a valid configuration send no analytics events.
       </p>
 
-      <h3>What an analytics-enabled version sends</h3>
+      <h3>What Dove sends</h3>
       <p>
         Dove sends only a small set of successful product actions, such as creating
         a saved place, opening an Explore place detail, creating or archiving a
@@ -687,51 +688,53 @@
         import outcome, or a broad number-of-choices bucket.
       </p>
       <p>
-        The Mixpanel SDK also supplies basic technical context used for aggregate
-        reliability analysis, such as Dove’s app and build version, operating
-        system version, Apple device model, screen dimensions, SDK version, and
-        connection type. Each app launch uses a new random identifier. Dove does
-        not join that identifier to your profile, Apple Account, CloudKit data, or
-        identifiers from another launch.
+        The analytics service also receives limited technical context, such as
+        Dove’s app and build version, operating system version, Apple device model,
+        screen dimensions, SDK version, connection type, and distribution channel.
+        The analytics SDK uses a new random identifier each app launch. Dove does
+        not associate that identifier with your Dove profile, Apple Account,
+        CloudKit data, or identifiers from another launch.
       </p>
 
       <h3>What Dove deliberately excludes</h3>
       <p>Analytics does not include:</p>
       <ul>
-        <li>your name, email address, or participant names;</li>
-        <li>search text or place, tag, list, or plan names;</li>
-        <li>addresses, device or place coordinates, or location history;</li>
+        <li>your name, email address, account identifiers, or participant names;</li>
+        <li>search text, place names or IDs, list or tag names, plan names, or notes;</li>
+        <li>addresses, device or place coordinates, precise location, or location history;</li>
         <li>URLs, sharing links, restaurant website content, or menu content;</li>
-        <li>CloudKit record identifiers or Apple Account details;</li>
+        <li>CloudKit record identifiers, receipts, or Apple Account details;</li>
         <li>raw errors, stack traces, or other free-form diagnostic text; or</li>
         <li>the advertising identifier or another cross-app advertising ID.</li>
       </ul>
       <p>
-        Automatic event capture, persistent Dove user or device identity, Mixpanel
-        People profiles, aliases, IP-based geolocation, attribution, advertising
+        Automatic event capture, persistent Dove user or device identity, analytics
+        user profiles, aliases, IP-based geolocation, attribution, advertising
         integrations, feature flags, and session replay are disabled. The Share
-        extension does not link or initialize Mixpanel.
+        extension does not include the analytics SDK or send analytics.
       </p>
 
-      <h3>Projects, storage, and retention</h3>
+      <h3>Processing and retention</h3>
       <p>
-        Dove uses separate Mixpanel projects for development and production.
-        TestFlight and App Store events use the production project and include a
-        fixed distribution-channel category so they can be separated in reporting.
-        Both projects use United States data residency. Mixpanel events are retained
-        for two years and then expire under the projects’ retention settings.
+        The analytics service provider stores and processes these limited analytics
+        in the United States for up to two years, after which they expire under the
+        service’s retention settings. The provider receives this information only to
+        provide analytics services on our behalf and must apply privacy and security
+        protections equivalent to those described in this policy.
       </p>
       <p>
         Because the random analytics identifier changes every launch and is not
-        tied to your identity, we generally cannot locate all of one person’s
-        analytics events in response to an individual access or deletion request.
+        associated with a Dove account or used to identify you, we generally cannot
+        locate all of one person’s analytics events in response to an individual
+        access or deletion request.
         This separation is intentional and reduces the ability to profile a person
         across app launches.
       </p>
       <p>
-        Dove’s Mixpanel configuration is designed for first-party product analytics,
-        not the cross-app or cross-site tracking Apple describes for App Tracking
-        Transparency (ATT). Dove does not request ATT permission for this analytics.
+        Dove uses this limited information for its own product analytics. It does
+        not use the information to track you across other companies’ apps or
+        websites, and Dove does not request App Tracking Transparency (ATT)
+        permission for this analytics.
         This paragraph describes Dove’s technical configuration; it is not a legal
         determination or guarantee about every jurisdiction.
       </p>
@@ -747,10 +750,11 @@
           processes data needed to provide those services.
         </li>
         <li>
-          <strong>Mixpanel</strong>
-          Processes the limited events described above on our behalf only when an
-          analytics-enabled Dove version and valid configuration are used. Read
-          <a href="https://mixpanel.com/legal/privacy-policy/">Mixpanel’s privacy information</a>.
+          <strong>Analytics service provider</strong>
+          Processes the limited usage and technical analytics described above on
+          our behalf, in the United States, for up to two years. The provider must
+          apply equivalent privacy and security protections and may not use Dove’s
+          analytics for advertising or cross-company tracking.
         </li>
         <li>
           <strong>Restaurant and related websites</strong>
@@ -814,10 +818,10 @@
           location permission in Apple Settings.
         </li>
         <li>
-          <span class="plain-label">Mixpanel:</span> Analytics events are retained
-          for two years. The per-launch identifiers are deliberately not tied to
-          you, which generally prevents us from finding every event from one person
-          for individual deletion.
+          <span class="plain-label">Usage analytics:</span> Analytics events are
+          retained for up to two years. The per-launch identifiers are deliberately
+          not associated with a Dove account, which generally prevents us from
+          finding every event from one person for individual deletion.
         </li>
         <li>
           <span class="plain-label">Support email:</span> You can ask us to delete
@@ -852,10 +856,11 @@
       <h2>11. International processing</h2>
       <p>
         Apple determines the locations and systems used for Apple services under
-        its policies. If Mixpanel analytics is enabled, Dove’s Mixpanel event data
-        is stored and processed in the United States. If you use Dove outside the
-        United States, this means those limited analytics events may be transferred
-        to and processed in the United States.
+        its policies. When Dove analytics is enabled, the limited usage and
+        technical analytics described above are stored and processed in the United
+        States by an analytics service provider. If you use Dove outside the United
+        States, this means those limited analytics may be transferred to and
+        processed in the United States.
       </p>
     </section>
 
