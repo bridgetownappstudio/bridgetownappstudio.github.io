@@ -152,16 +152,30 @@ summary:focus-visible {
 }
 
 .hero {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  align-items: start;
-  gap: clamp(1.5rem, 5vw, 3rem);
+  --hero-gap: clamp(1.5rem, 5vw, 3rem);
+  --hero-mark-size: clamp(5.5rem, 12vw, 7.5rem);
+
   margin-top: clamp(4.5rem, 10vw, 7rem);
+}
+
+.hero-heading {
+  display: grid;
+  grid-template-columns: var(--hero-mark-size) minmax(0, 1fr);
+  align-items: end;
+  gap: var(--hero-gap);
+}
+
+.hero-title {
+  min-width: 0;
+}
+
+.hero-details {
+  margin-left: calc(var(--hero-mark-size) + var(--hero-gap));
 }
 
 .hero-mark {
   display: grid;
-  width: clamp(5.5rem, 12vw, 7.5rem);
+  width: var(--hero-mark-size);
   aspect-ratio: 1;
   place-items: center;
   border: 1px solid color-mix(in srgb, var(--accent) 18%, var(--line));
@@ -301,6 +315,73 @@ h1 {
 }
 
 .contents a:hover {
+  color: var(--accent-strong);
+}
+
+.mobile-contents {
+  display: none;
+}
+
+.mobile-contents summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 3rem;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 680;
+  list-style: none;
+}
+
+.mobile-contents summary::-webkit-details-marker {
+  display: none;
+}
+
+.mobile-contents summary::after {
+  content: "+";
+  flex: 0 0 auto;
+  color: var(--accent-strong);
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.mobile-contents[open] summary::after {
+  content: "\2212";
+}
+
+.mobile-contents nav {
+  display: none;
+  padding: 0.75rem 0 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.mobile-contents[open] nav {
+  display: block;
+}
+
+.mobile-contents ol {
+  display: grid;
+  gap: 0.2rem;
+  margin: 0;
+  padding: 0.75rem 0 0 1.3rem;
+}
+
+.mobile-contents li {
+  margin: 0;
+  padding: 0.2rem 0;
+  color: var(--ink-secondary);
+}
+
+.mobile-contents a {
+  color: var(--ink);
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.mobile-contents a:hover {
   color: var(--accent-strong);
 }
 
@@ -458,18 +539,19 @@ code {
     width: min(100% - 2rem, var(--page-width));
   }
 
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin-top: 4rem;
+  .header-inner {
+    padding-bottom: 3.25rem;
   }
 
-  .hero-mark {
-    width: 4.75rem;
+  .hero {
+    --hero-gap: 1rem;
+    --hero-mark-size: 4.25rem;
+
+    margin-top: 2.75rem;
   }
 
   h1 {
-    font-size: clamp(2.55rem, 13.5vw, 4rem);
+    font-size: clamp(2.5rem, 12vw, 3.5rem);
   }
 
   .dates {
@@ -481,8 +563,22 @@ code {
     padding: 1.35rem;
   }
 
-  .contents ol {
-    grid-template-columns: 1fr;
+  .page {
+    padding-top: 3rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .contents {
+    display: none;
+  }
+
+  .mobile-contents {
+    display: block;
+    margin: 2.75rem 0 0;
+    padding: 0 0.25rem;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    scroll-margin-top: 1rem;
   }
 }
 
@@ -565,7 +661,8 @@ html[data-theme="dark"] {
   }
 
   .skip-link,
-  .contents {
+  .contents,
+  .mobile-contents {
     display: none;
   }
 
