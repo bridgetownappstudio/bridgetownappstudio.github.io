@@ -1,0 +1,14 @@
+/* Reuse Dove's existing legal-page design without altering the privacy page. */
+.summary p:last-child {
+  margin-bottom: 0;
+}
+
+#using-dove {
+  margin-top: clamp(4rem, 9vw, 6rem);
+}
+
+@media (max-width: 42rem) {
+  .hero-details {
+    margin-left: 0;
+  }
+}
