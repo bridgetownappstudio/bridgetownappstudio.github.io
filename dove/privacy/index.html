@@ -736,10 +736,11 @@
         trial eligibility, normalized error category, and whether access is active.
       </p>
       <p>
-        Mixpanel also receives limited technical context, such as SDK version,
-        connection type, and distribution channel. Dove excludes the SDK's automatic
-        app/build version, operating system, manufacturer, device model, and screen
-        dimension properties from these events.
+        Mixpanel also receives limited technical context, including Dove's app
+        and build version, analytics environment, SDK version, connection type,
+        and distribution channel. Dove excludes the SDK's automatic operating
+        system, manufacturer, device model, and screen dimension properties from
+        these events.
         The analytics SDK uses a new random identifier each app launch. Dove does
         not associate that identifier with your Dove profile, Apple Account,
         CloudKit data, or identifiers from another launch.
