@@ -467,7 +467,7 @@
           </p>
           <p class="dates">
             <span><strong>Effective:</strong> August 5, 2026</span>
-            <span><strong>Last updated:</strong> August 5, 2026</span>
+            <span><strong>Last updated:</strong> October 13, 2026</span>
           </p>
         </div>
       </div>
@@ -496,6 +496,12 @@
           associated with a Dove account or used to identify you. See
           <a href="#analytics">Limited product analytics</a>.
         </li>
+        <li>
+          Dove Plus uses Apple for billing and RevenueCat to validate subscription
+          access and restore purchases. RevenueCat receives purchase information
+          and a random purchase-support identifier, separate from usage analytics.
+          See <a href="#subscriptions">Subscriptions and purchases</a>.
+        </li>
         <li>We do not sell personal information or use it for targeted advertising.</li>
       </ul>
     </section>
@@ -509,6 +515,7 @@
         <li><a href="#icloud">iCloud and Apple services</a></li>
         <li><a href="#location">Location</a></li>
         <li><a href="#analytics">Limited analytics</a></li>
+        <li><a href="#subscriptions">Subscriptions and purchases</a></li>
         <li><a href="#providers">Service providers</a></li>
         <li><a href="#sharing">Sharing and disclosures</a></li>
         <li><a href="#retention">Retention and your controls</a></li>
@@ -528,6 +535,7 @@
           <li><a href="#icloud">iCloud and Apple services</a></li>
           <li><a href="#location">Location</a></li>
           <li><a href="#analytics">Limited analytics</a></li>
+          <li><a href="#subscriptions">Subscriptions and purchases</a></li>
           <li><a href="#providers">Service providers</a></li>
           <li><a href="#sharing">Sharing and disclosures</a></li>
           <li><a href="#retention">Retention and your controls</a></li>
@@ -544,11 +552,12 @@
         This policy is provided by Bridgetown App Studio, LLC ("Bridgetown App
         Studio," "we," "us," or "our") and applies to Dove, including its
         Apple-platform app and Share extension. Dove helps you find and save
-        places, organize them with tags, import places shared from Apple Maps, and
+        places, organize them with tags, import places shared from Apple Maps or
+        Google Maps, and
         create plans that invited participants can vote on and rank.
       </p>
       <p>
-        This policy does not control Apple, our analytics service provider,
+        This policy does not control Apple, Mixpanel, RevenueCat,
         restaurant websites, or other third-party services you choose to open.
         Their own policies apply to their services.
       </p>
@@ -583,9 +592,9 @@
           for details.
         </li>
         <li>
-          <strong>Apple Maps shared-place imports</strong>
+          <strong>Maps shared-place imports</strong>
           When you share a place to Dove, the Share extension can read the shared
-          MapKit item, Apple Maps URL, or supported text. This can include a place
+          MapKit item, Apple Maps or Google Maps URL, or supported text. This can include a place
           name, address, coordinates, category, phone number, website, Apple Maps
           identifiers, and time zone.
         </li>
@@ -594,6 +603,13 @@
           Dove may fetch publicly available restaurant pages, related menu pages,
           PDFs, and images to find hours, menus, events, summaries, and images.
           This happens for place-detail and enrichment features.
+        </li>
+        <li>
+          <strong>Subscription and purchase information</strong>
+          App Store transactions, product identifiers, purchase and expiration
+          dates, trial and subscription status, and a random RevenueCat App User
+          ID used to check access, restore purchases, and help with purchase issues.
+          Apple handles billing; Dove does not receive your payment-card details.
         </li>
         <li>
           <strong>Support communications</strong>
@@ -612,7 +628,9 @@
         <li>sync supported app data across your Apple devices through iCloud;</li>
         <li>share a list or plan with the people you choose;</li>
         <li>show votes, rankings, and plan results to authorized participants;</li>
-        <li>complete Apple Maps imports and continue work from the Share extension;</li>
+        <li>complete Maps imports and continue work from the Share extension;</li>
+        <li>validate Dove Plus access, restore purchases, prevent purchase fraud,
+          and measure subscription performance;</li>
         <li>maintain app reliability and respond to support requests; and</li>
         <li>
           understand aggregate feature use through the limited analytics described
@@ -697,7 +715,7 @@
       <h2>6. Limited product analytics</h2>
       <p>
         When you use an analytics-enabled Dove version, Dove sends limited
-        product-usage and technical analytics to an analytics service provider to
+        product-usage and technical analytics to Mixpanel to
         understand feature use, improve the product, and monitor reliability. This
         information is not associated with a Dove account or used to identify you.
         Versions without analytics or a valid configuration send no analytics events.
@@ -705,24 +723,30 @@
 
       <h3>What Dove sends</h3>
       <p>
-        Dove sends only a small set of successful product actions, such as creating
+        Dove sends a limited set of product events, such as starting, skipping, or
+        completing onboarding; creating
         a saved place, opening an Explore place detail, creating or archiving a
         plan, submitting a vote or ranking, selecting a winner, preparing a plan
-        share, or completing a shared-place import. Properties are limited to
+        share; completing a shared-place import; viewing a Dove Plus paywall;
+        starting, completing, cancelling, or encountering an error or pending
+        approval during a purchase; restoring purchases; and changes in
+        subscription access. Properties are limited to
         fixed categories and count ranges, such as the feature source, vote choice,
-        import outcome, or a broad number-of-choices bucket.
+        import outcome, a broad number-of-choices bucket, monthly or annual package,
+        trial eligibility, normalized error category, and whether access is active.
       </p>
       <p>
-        The analytics service also receives limited technical context, such as
-        Dove’s app and build version, operating system version, Apple device model,
-        screen dimensions, SDK version, connection type, and distribution channel.
+        Mixpanel also receives limited technical context, such as SDK version,
+        connection type, and distribution channel. Dove excludes the SDK's automatic
+        app/build version, operating system, manufacturer, device model, and screen
+        dimension properties from these events.
         The analytics SDK uses a new random identifier each app launch. Dove does
         not associate that identifier with your Dove profile, Apple Account,
         CloudKit data, or identifiers from another launch.
       </p>
 
       <h3>What Dove deliberately excludes</h3>
-      <p>Analytics does not include:</p>
+      <p>Mixpanel events do not include:</p>
       <ul>
         <li>your name, email address, account identifiers, or participant names;</li>
         <li>search text, place names or IDs, list or tag names, plan names, or notes;</li>
@@ -765,8 +789,56 @@
       </p>
     </section>
 
+    <section id="subscriptions">
+      <h2>7. Subscriptions and purchases</h2>
+      <p>
+        Dove Plus purchases are billed through your Apple Account. Dove uses
+        RevenueCat as a service provider to validate App Store transactions,
+        determine subscription access, restore purchases, prevent purchase fraud,
+        and measure subscription performance. RevenueCat receives purchase
+        history and subscription status, product identifiers, purchase and
+        expiration dates, and the app, storefront, currency, and network metadata
+        needed to provide its service.
+      </p>
+      <p>
+        RevenueCat creates a random anonymous App User ID and stores it on your
+        device. This purchase-support identifier can persist across app launches
+        and may be associated with purchase history during restoration. It is
+        different from Mixpanel's identifier, which changes each launch. You can
+        find the purchase-support identifier in Dove's You tab to help us
+        investigate a subscription issue; sharing it with support is optional.
+      </p>
+      <p>
+        Dove does not send RevenueCat your saved places, search text, list or plan
+        content, tags, profile name, precise location, CloudKit record IDs, Apple
+        Account sign-in details, or advertising identifier. Dove does not supply
+        a custom identifying account ID or enable automatic device-identifier
+        collection for RevenueCat. We do not connect the anonymous purchase-support
+        identifier to your Dove profile or Mixpanel events. If you email support,
+        your message may associate your email address with information you choose
+        to include.
+      </p>
+      <p>
+        Purchase-service records are retained as needed to maintain subscription
+        access, support restoration and customer requests, prevent fraud, and
+        meet applicable accounting, tax, dispute, and legal requirements. Records
+        needed for those purposes may remain after a subscription expires. You
+        can contact us to request access to or deletion of purchase-service data
+        under our control. Deletion may limit our ability to investigate purchase
+        history; it does not cancel a subscription or delete Apple's transaction
+        records. Manage or cancel subscriptions through Apple separately.
+      </p>
+      <p>
+        RevenueCat processes this information on our behalf under its
+        data-protection terms. See
+        <a href="https://www.revenuecat.com/privacy">RevenueCat's privacy information</a>.
+        Apple processes billing and transaction information under
+        <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>.
+      </p>
+    </section>
+
     <section id="providers">
-      <h2>7. Service providers and outside sites</h2>
+      <h2>8. Service providers and outside sites</h2>
       <ul class="service-list">
         <li>
           <strong>Apple</strong>
@@ -775,10 +847,17 @@
           processes data needed to provide those services.
         </li>
         <li>
-          <strong>Analytics service provider</strong>
+          <strong>Mixpanel</strong>
           Processes the limited analytics described in
           <a href="#analytics">Limited product analytics</a> on our behalf and
-          must apply equivalent privacy and security protections.
+          must apply equivalent privacy and security protections. See
+          <a href="https://mixpanel.com/legal/privacy-policy/">Mixpanel's privacy information</a>.
+        </li>
+        <li>
+          <strong>RevenueCat</strong>
+          Processes the purchase and subscription information described in
+          <a href="#subscriptions">Subscriptions and purchases</a> on our behalf
+          and must apply equivalent privacy and security protections.
         </li>
         <li>
           <strong>Restaurant and related websites</strong>
@@ -797,7 +876,7 @@
     </section>
 
     <section id="sharing">
-      <h2>8. Sharing and disclosures</h2>
+      <h2>9. Sharing and disclosures</h2>
       <p>
         Dove shares plan or saved-list content only when you use Apple’s sharing
         controls. The owner chooses or approves participants, and CloudKit enforces
@@ -816,7 +895,7 @@
     </section>
 
     <section id="retention">
-      <h2>9. Retention, deletion, and your controls</h2>
+      <h2>10. Retention, deletion, and your controls</h2>
       <ul>
         <li>
           <span class="plain-label">Saved places and tags:</span> Dove provides
@@ -847,6 +926,13 @@
           retention period and the limits of individual access or deletion.
         </li>
         <li>
+          <span class="plain-label">Subscriptions:</span> Manage or cancel
+          subscriptions through your Apple Account. Removing Dove or deleting
+          support or purchase-service data does not cancel billing. See
+          <a href="#subscriptions">Subscriptions and purchases</a> for retention
+          and requests about RevenueCat records.
+        </li>
+        <li>
           <span class="plain-label">Support email:</span> You can ask us to delete
           support correspondence associated with your email address, subject to
           records we need to retain for security or legal obligations.
@@ -863,7 +949,7 @@
     </section>
 
     <section id="security">
-      <h2>10. Security</h2>
+      <h2>11. Security</h2>
       <p>
         Dove relies on Apple’s platform protections for app storage, permissions,
         iCloud, and CloudKit sharing. Network requests use the security available
@@ -876,7 +962,7 @@
     </section>
 
     <section id="international">
-      <h2>11. International processing</h2>
+      <h2>12. International processing</h2>
       <p>
         Apple determines the locations and systems used for Apple services under
         its policies. The limited analytics described in
@@ -884,10 +970,16 @@
         and processed in the United States. If you use Dove elsewhere, those
         analytics may be transferred to and processed in the United States.
       </p>
+      <p>
+        RevenueCat and its service providers may process purchase-service data
+        in the United States and other locations described in their privacy and
+        data-protection terms. Applicable transfer safeguards are governed by
+        those terms. Your location may differ from where these services operate.
+      </p>
     </section>
 
     <section id="changes">
-      <h2>12. Policy changes and contact</h2>
+      <h2>13. Policy changes and contact</h2>
       <p>
         We may update this policy when Dove’s features, service providers, or data
         practices change. We will update the date at the top of this page. If a
