@@ -56,6 +56,21 @@ git push -u origin your-focused-branch
 Review the pull request and merge it into `main` after the checks pass. Opening a
 pull request is the normal workflow; do not push directly to `main`.
 
+## Dove press room
+
+The press room lives at `/dove/press/` and follows the static HTML/CSS workflow
+above. Its downloadable press release and fact sheet have editable HTML sources
+beside their PDFs in `dove/press/downloads/`. After editing either HTML file or
+`documents.css`, open the HTML in a browser and print to PDF using its CSS page
+size, background graphics enabled, and browser headers/footers disabled. Check
+that each PDF remains one page, contains the launch date and working download
+link, and has no clipped text.
+
+When replacing artwork, keep the displayed image, individual download, version
+labels, fact sheet, `ARTWORK-USAGE.txt`, and artwork ZIP consistent. The ZIP
+contains only the logo, header artwork, Search artwork, and usage notes. Keep
+internal outreach and review documents out of public downloads.
+
 ## Deployment
 
 GitHub Pages automatically publishes the repository root after a pull request is
