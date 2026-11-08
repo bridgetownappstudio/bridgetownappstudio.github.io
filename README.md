@@ -60,7 +60,11 @@ pull request is the normal workflow; do not push directly to `main`.
 
 The studio homepage (`index.html`) introduces Dove and its maker. The consumer
 product page lives at `/dove/` (`dove/index.html`); both share `assets/site.css`.
-They link to the same App Store listing, with current local subscription pricing
+The studio homepage also uses `assets/studio.css` for its separate platform and
+developer story, with published App Store previews in `assets/dove/`. See that
+folder’s README for image provenance.
+
+Both pages link to the same App Store listing, with current local subscription pricing
 and terms left to the App Store and purchase screen. Saving and exploring are
 free; creating Plans requires Dove Plus, while invitees can join and vote without
 subscribing.

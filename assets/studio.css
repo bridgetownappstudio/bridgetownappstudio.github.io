@@ -1,0 +1,90 @@
+/* Studio-only presentation. Dove's consumer page keeps its own visual story. */
+.studio-home {
+  background: #fbfaf8;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif;
+  letter-spacing: -.015em;
+}
+.studio-home .eyebrow { letter-spacing: .11em; }
+.studio-product-hero {
+  display: grid;
+  grid-template-columns: 1.25fr .75fr;
+  align-items: center;
+  gap: 80px;
+  padding-block: 64px 70px;
+}
+.studio-product-copy .product-brand { margin-bottom: 28px; }
+.studio-product-copy h1 {
+  font-size: clamp(3.4rem, 6.1vw, 5.6rem);
+  font-weight: 650;
+  line-height: 1.04;
+  letter-spacing: -.065em;
+}
+.studio-product-copy h1 em { color: var(--rust); }
+.studio-product-copy .lead { font-size: 1.55rem; font-weight: 500; letter-spacing: -.035em; }
+.studio-product-copy .hero-description { max-width: 490px; }
+.studio-app-preview { max-width: 370px; justify-self: end; width: 100%; }
+.preview-surface {
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+  border: 1px solid #e7e3dd;
+  border-radius: 32px;
+  background: linear-gradient(150deg, #fffefa, #f0ece6);
+}
+.preview-surface img { width: 100%; max-width: 270px; border-radius: 12px; }
+.studio-app-preview figcaption { margin-top: 16px; font-size: .82rem; font-weight: 600; text-align: center; }
+.studio-app-preview figcaption span { display: block; margin-top: 4px; color: var(--muted); font-size: .69rem; font-weight: 400; }
+.platform-section { padding-block: 64px; border-top: 1px solid var(--line); }
+.platform-intro { max-width: 720px; }
+.platform-intro > p:last-child { margin-top: 22px; max-width: 620px; color: var(--muted); }
+.studio-home h2 { font-weight: 600; letter-spacing: -.055em; }
+.platform-list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; padding: 0; margin: 34px 0 42px; list-style: none; }
+.platform-list li { border-top: 1px solid var(--line); padding-top: 20px; }
+.platform-list strong { display: block; font-size: 1.1rem; font-weight: 600; }
+.platform-list span { display: block; margin-top: 5px; font-size: .75rem; color: var(--muted); }
+.platform-previews { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.platform-previews img { width: 100%; aspect-ratio: 16 / 10; object-fit: contain; background: #f5f3ef; border: 1px solid var(--line); border-radius: 16px; }
+.platform-previews figcaption { padding: 18px 4px 0; }
+.platform-previews strong { display: block; font-size: 1.05rem; font-weight: 600; }
+.platform-previews figcaption span { display: block; font-size: .7rem; color: var(--muted); margin-top: 5px; }
+.platform-note, .technology-note { margin-top: 28px; color: var(--muted); font-size: .78rem; }
+.technology-section { padding-block: 70px; background: #f0eeea; border-block: 1px solid var(--line); }
+.technology-heading > p:last-child { max-width: 590px; margin-top: 22px; color: var(--muted); }
+.technology-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 40px; }
+.technology-card { background: var(--paper); border: 1px solid #e5dfd6; border-radius: 18px; padding: 28px; }
+.technology-label { display: block; margin-bottom: 24px; color: var(--rust); font-size: .66rem; font-weight: 700; letter-spacing: .09em; }
+.technology-card h3 { font-size: 1.35rem; line-height: 1.2; letter-spacing: -.04em; }
+.technology-card > p { margin-top: 18px; font-size: .9rem; color: var(--muted); }
+.technology-card .text-link { margin-top: 14px; font-size: .78rem; }
+.studio-home .studio-section { background: #fbfaf8; border-top: 0; }
+.studio-home .studio-grid { gap: 70px; }
+@media (max-width: 1000px) {
+  .studio-product-hero { grid-template-columns: 1.15fr .85fr; gap: 36px; padding-top: 48px; }
+  .studio-product-copy h1 { font-size: clamp(3.4rem, 6.2vw, 4.7rem); }
+  .preview-surface { padding: 20px; }
+  .technology-grid { gap: 16px; }
+  .technology-card { padding: 22px; }
+}
+@media (max-width: 720px) {
+  .studio-product-hero { grid-template-columns: 1fr; gap: 34px; padding-block: 40px 44px; }
+  .studio-product-copy h1 { font-size: clamp(2.7rem, 11.6vw, 4.6rem); }
+  .studio-product-copy .lead { font-size: 1.3rem; }
+  .studio-product-copy .product-brand { margin-bottom: 22px; }
+  .studio-app-preview { justify-self: center; max-width: 310px; }
+  .preview-surface { padding: 20px; }
+  .platform-section { padding-block: 44px; }
+  .platform-list { grid-template-columns: 1fr 1fr; gap: 22px 16px; margin-bottom: 30px; }
+  .platform-list strong { font-size: 1rem; }
+  .platform-list span { font-size: .7rem; }
+  .platform-previews { grid-template-columns: 1fr; gap: 30px; }
+  .technology-section { padding-block: 46px; }
+  .technology-grid { grid-template-columns: 1fr; margin-top: 30px; }
+  .technology-card { padding: 26px; }
+  .technology-label { margin-bottom: 18px; }
+  .studio-home .studio-grid { gap: 28px; }
+}
+@media print {
+  .studio-product-hero { padding-block: 20px; }
+  .studio-app-preview { max-width: 180px; }
+  .technology-card { break-inside: avoid; }
+}
