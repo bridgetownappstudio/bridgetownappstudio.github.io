@@ -1,125 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="/logo.png">
-  <title>Bridgetown App Studio</title>
-  <style>
-    :root {
-      --green-dark: #014421;
-      --green-light: #1f7a3d;
-      --text-color: #2e2e2e;
-      --bg-color: #f7fdf8;
-    }
-
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-      background: var(--bg-color);
-      color: var(--text-color);
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    header {
-      background: var(--green-dark);
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-
-    header img {
-      height: 64px;
-      margin-bottom: 1rem;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-
-    main {
-      flex: 1;
-      padding: 2rem 1rem;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    section {
-      margin-bottom: 2rem;
-    }
-
-    ul {
-      padding-left: 1.25rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #dbece0;
-      font-size: 0.9rem;
-      color: var(--green-dark);
-    }
-
-    a {
-      color: var(--green-light);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    a:focus-visible {
-      outline: 3px solid #b8efc8;
-      outline-offset: 3px;
-      border-radius: 2px;
-    }
-
-    footer a {
-      color: var(--green-dark);
-      text-decoration: underline;
-      text-underline-offset: 0.18em;
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Meet Dove, the place-saving and shared planning app from Karan at Bridgetown App Studio. Independently made in Portland, Oregon.">
+  <title>Bridgetown App Studio — Meet Dove</title>
+  <link rel="canonical" href="https://bridgetownappstudio.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bridgetown App Studio — Meet Dove">
+  <meta property="og:description" content="Save the places. Make the plan. Meet Dove, independently made in Portland, Oregon.">
+  <meta property="og:url" content="https://bridgetownappstudio.com/">
+  <meta property="og:image" content="https://bridgetownappstudio.com/dove/press/assets/Dove-Header-v2.png">
+  <link rel="icon" href="/dove/assets/dove-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
-  <header>
-    <!-- Replace logo.png with your actual file name -->
-    <img src="logo.png" alt="Bridgetown App Studio Logo">
-    <h1>Bridgetown App Studio, LLC</h1>
-    <p>iOS Apps. Clean Code. Seamless Experiences.</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="masthead wrap">
+    <a class="studio-brand" href="/" aria-label="Bridgetown App Studio home">Bridgetown<span>APP STUDIO</span></a>
+    <nav aria-label="Main navigation"><a href="/dove/">Meet Dove</a><a href="#studio">The studio</a><a href="mailto:info@bridgetownappstudio.com">Get in touch <span aria-hidden="true">↗</span></a></nav>
   </header>
-
-  <main>
-    <section>
-      <h2>About Us</h2>
-      <p>We are a boutique software studio based in Oregon, specializing in custom iOS apps built with Swift and SwiftUI. Whether you're launching a new product or modernizing an existing one, we help bring your vision to life.</p>
+  <main id="main" tabindex="-1">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">INDEPENDENTLY MADE IN PORTLAND, OREGON</p>
+        <a class="product-brand" href="/dove/" aria-label="Discover Dove"><img src="/dove/assets/dove-mark.svg" alt="" width="54" height="54"><span>dove.<small>WHERE TO?</small></span></a>
+        <h1 id="hero-title">Meet Dove.<br>Go somewhere<br><em>good.</em></h1>
+        <p class="lead">The places you want to try.<br>The people you want to go with.</p>
+        <p class="hero-description">Save places, bring a shortlist together, and choose your next outing with Dove — our place-saving and planning app.</p>
+        <div class="actions"><a class="button primary" href="https://apps.apple.com/us/app/dove-where-to/id6783623516">Download on the App Store <span aria-hidden="true">↗</span></a><a class="text-link" href="/dove/">Explore Dove <span aria-hidden="true">→</span></a></div>
+        <p class="fine-print">Free to save and explore. Create Plans with Dove Plus.</p>
+      </div>
+      <figure class="hero-art"><div class="photo-frame"><img src="/dove/assets/dining.jpg" alt="Illustration of a couple enjoying dinner together in a fictional restaurant." width="666" height="1000" fetchpriority="high"></div><figcaption>For your next “where should we go?”<span>Generated illustration · Fictional people and setting.</span></figcaption></figure>
     </section>
-
-    <section>
-      <h2>Services</h2>
-      <ul>
-        <li>Custom iOS App Development</li>
-        <li>SwiftUI &amp; Swift Concurrency Expertise</li>
-        <li>Modular Architecture &amp; SPM Integration</li>
-        <li>App Store Deployment &amp; Consulting</li>
-      </ul>
+    <section class="product-overview wrap" aria-labelledby="product-title">
+      <div class="section-heading"><p class="eyebrow">ONE FAMILIAR QUESTION. A LITTLE LESS BACK-AND-FORTH.</p><h2 id="product-title">From “we should go”<br>to “see you there.”</h2></div>
+      <ol class="steps">
+        <li><span class="step-number">01 / SAVE</span><h3>Keep the good ideas.</h3><p>A café to try, a dinner recommendation, a favorite spot. Save and organize places for another day.</p></li>
+        <li><span class="step-number">02 / PLAN</span><h3>Bring a few together.</h3><p>Create a shared Plan with Dove Plus, then invite the people you’re meeting to your shortlist.</p></li>
+        <li><span class="step-number">03 / GO</span><h3>Let everyone weigh in.</h3><p>Invitees vote Yes, Maybe, or No without their own subscription. The organizer chooses the final place.</p></li>
+      </ol>
+      <a class="text-link" href="/dove/">A closer look at Dove <span aria-hidden="true">→</span></a>
     </section>
-
-    <section>
-      <h2>Contact</h2>
-      <p>Email us at <a href="mailto:info@bridgetownappstudio.com">info@bridgetownappstudio.com</a></p>
-    </section>
+    <section id="studio" class="studio-section" aria-labelledby="studio-title"><div class="wrap studio-grid">
+      <div><p class="eyebrow">THE PERSON BEHIND THE APP</p><h2 id="studio-title">A small studio.<br>A thoughtful start.</h2></div>
+      <div class="studio-copy"><p>I’m Karan, the maker of Dove and founder of Bridgetown App Studio in Portland, Oregon.</p><p>Dove is the studio’s main product: a way to turn the places you’ve saved into plans with the people you care about. It starts with a question we all know — where should we go?</p><a class="text-link" href="mailto:info@bridgetownappstudio.com">Say hello to Karan <span aria-hidden="true">↗</span></a></div>
+    </div></section>
   </main>
-
-  <footer>
-    &copy; 2026 Bridgetown App Studio, LLC.<br>
-    Made with 💚 in Portland, OR 🌲<br>
-    <a href="/dove/press/">Dove Press Room</a> ·
-    <a href="/dove/privacy/">Dove Privacy Policy</a>
-  </footer>
+  <footer class="site-footer wrap"><div><a class="footer-studio" href="/">Bridgetown App Studio</a><p>© 2026 Bridgetown App Studio, LLC.<br>Made in Portland, Oregon.</p></div><nav aria-label="Footer navigation"><a href="/dove/">Dove</a><a href="/dove/press/">Press</a><a href="/dove/support/">Support</a><a href="/dove/privacy/">Privacy</a><a href="/dove/terms/">Terms</a></nav></footer>
 </body>
 </html>

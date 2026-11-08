@@ -56,6 +56,21 @@ git push -u origin your-focused-branch
 Review the pull request and merge it into `main` after the checks pass. Opening a
 pull request is the normal workflow; do not push directly to `main`.
 
+## Homepage and Dove product page
+
+The studio homepage (`index.html`) introduces Dove and its maker. The consumer
+product page lives at `/dove/` (`dove/index.html`); both share `assets/site.css`.
+They link to the same App Store listing, with current local subscription pricing
+and terms left to the App Store and purchase screen. Saving and exploring are
+free; creating Plans requires Dove Plus, while invitees can join and vote without
+subscribing.
+
+The JPEGs in `dove/assets/` are smaller display copies of the existing press
+artwork: `dining.jpg` comes from `generated-couple.png`, and
+`choose-together.jpg` comes from `Dove-Search-v3.png`. Keep the original mark
+unchanged and retain the captions identifying generated imagery and illustrative
+UI. Original press downloads remain in `dove/press/`.
+
 ## Dove press room
 
 The press room lives at `/dove/press/` and follows the static HTML/CSS workflow
