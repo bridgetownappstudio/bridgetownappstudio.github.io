@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>Dove lowercase d magnifying-glass mark</title>
+  <g fill="#F26432">
+    <path fill-rule="evenodd" d="M430 295a270 270 0 1 1 0 540 270 270 0 0 1 0-540Zm0 115a155 155 0 1 0 0 310 155 155 0 0 0 0-310Z"/>
+    <path d="M585 565V177.5a57.5 57.5 0 0 1 115 0V565Z"/>
+    <path d="M583.4 799.9 763.4 949.9a65 65 0 0 0 83.2-99.8l-180-150a65 65 0 0 0-83.2 99.8Z"/>
+  </g>
+</svg>
