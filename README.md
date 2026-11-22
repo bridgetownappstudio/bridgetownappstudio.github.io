@@ -75,6 +75,32 @@ artwork: `dining.jpg` comes from `generated-couple.png`, and
 unchanged and retain the captions identifying generated imagery and illustrative
 UI. Original press downloads remain in `dove/press/`.
 
+## Retiring the Black Friday page
+
+The 2026 campaign ends at the start of December 1 Pacific (December 1 at
+08:00 UTC). This is a static page: the banner and offer do **not** expire
+automatically. At retirement:
+
+1. Remove the `BLACK FRIDAY BANNER` block in `index.html`. The three
+   `.seasonal-banner` rules in `assets/site.css` can also be removed.
+2. In `dove/black-friday/index.html`, replace the marked `BLACK FRIDAY OFFER`
+   section with an ended notice. Keep `id="offer"` and `id="hero-title"`, use
+   “This Black Friday offer has ended” as the heading, and link to `/dove/`
+   for current Dove information. Remove the redemption link entirely.
+3. Replace the marked `BLACK FRIDAY TERMS` section with a short ended notice,
+   preserving `id="offer-terms"` for existing navigation. Update the page title,
+   description, and Open Graph title/description so they no longer advertise
+   an active discount. Keep the page URL available for old links.
+4. Preview the homepage and campaign page at phone and desktop widths, check
+   keyboard navigation, and confirm there are no Apple redemption links left
+   in the page before publishing the retirement change.
+
+Merging into `main` publishes the campaign through GitHub Pages; obtain explicit
+launch authorization before merging. A markup or network check does not verify
+Apple’s redemption sheet. Before launch,
+verify eligibility, first-year price, and renewal price without purchasing on
+an eligible U.S. iPhone.
+
 ## Dove press room
 
 The press room lives at `/dove/press/` and follows the static HTML/CSS workflow
