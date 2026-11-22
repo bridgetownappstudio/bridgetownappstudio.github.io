@@ -26,5 +26,6 @@
 @media (max-width: 720px) {
   .offer-hero { grid-template-columns: 1fr; }
   .offer-hero h1 { font-size: clamp(2.6rem, 10.4vw, 4.4rem); }
+  .offer-page .photo-frame { aspect-ratio: 4 / 5; }
   .offer-access { padding: 24px; }
 }
