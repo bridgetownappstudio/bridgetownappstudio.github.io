@@ -1,0 +1,31 @@
+/* Campaign-only layout; typography, colors, buttons, and footer come from site.css. */
+.offer-hero { grid-template-columns: 1.35fr 1fr; gap: 48px; }
+.offer-hero h1 { font-size: clamp(2.8rem, 4.5vw, 4.4rem); }
+.offer-page .eyebrow { font-size: .875rem; letter-spacing: .07em; }
+.offer-page nav a, .offer-page .button, .offer-page .text-link { font-size: .875rem; }
+.offer-page .hero-description, .offer-page .steps p, .offer-page .details-list dd { font-size: 1rem; }
+.offer-price { margin-top: 26px; padding-left: 18px; border-left: 3px solid var(--orange); }
+.offer-price strong { font-size: 2rem; line-height: 1.2; font-weight: 600; letter-spacing: -.04em; }
+.offer-price p + p { margin-top: 4px; color: var(--muted); font-size: .875rem; }
+.offer-page .fine-print { max-width: 540px; font-size: .875rem; }
+.offer-device { margin-top: 12px; color: var(--muted); font-size: .875rem; }
+.offer-page .hero-art figcaption { font-size: .875rem; }
+.offer-page .hero-art figcaption span { font-size: .8125rem; }
+.offer-access { margin-top: 38px; padding: 28px 32px; border-left: 3px solid var(--orange); background: var(--peach); }
+.offer-access p { max-width: 760px; margin-top: 10px; }
+.offer-access .text-link { margin-top: 14px; }
+.offer-deadline { margin-top: 24px; color: var(--rust); font-weight: 600; }
+.offer-page .details-section { border-top: 1px solid var(--line); }
+.offer-privacy { padding-block: 40px; border-block: 1px solid var(--line); }
+.offer-privacy h2 { font-size: 1.6rem; }
+.offer-privacy p { max-width: 800px; margin-top: 16px; color: var(--muted); }
+.offer-privacy .text-link { margin-top: 14px; }
+@media (max-width: 1000px) {
+  .offer-hero { gap: 32px; }
+}
+@media (max-width: 720px) {
+  .offer-hero { grid-template-columns: 1fr; }
+  .offer-hero h1 { font-size: clamp(2.6rem, 10.4vw, 4.4rem); }
+  .offer-page .photo-frame { aspect-ratio: 4 / 5; }
+  .offer-access { padding: 24px; }
+}
